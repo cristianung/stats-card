@@ -1,0 +1,32 @@
+
+/* 
+    || MEDIA QUERY MANAGER
+
+       - small-phone:   375px
+       - small-phone-2: 470px
+       - large-phone:   600px
+       - tab-port:      900px
+       - tab-land:      1200px
+       - big-desktop:   1800px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == small-phone {
+        @media only screen and (max-width: 23.44em) { @content }; 
+    }
+    @if $breakpoint == small-phone-2 {
+        @media only screen and (max-width: 29.69em){ @content };
+    }
+    @if $breakpoint == large-phone {
+        @media only screen and (max-width: 37.5em) { @content };
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };
+    }
+}

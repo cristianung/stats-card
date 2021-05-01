@@ -1,0 +1,165 @@
+/* 
+    || MEDIA QUERY MANAGER
+
+       - small-phone:   375px
+       - small-phone-2: 470px
+       - large-phone:   600px
+       - tab-port:      900px
+       - tab-land:      1200px
+       - big-desktop:   1800px
+*/
+:root {
+  --color-primary-very-dark-blue: hsl(233, 47%, 7%);
+  --color-primary-dark-desaturated-blue: hsl(244, 38%, 16%);
+  --color-primary-soft-violet: hsl(277, 64%, 61%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-slightly-transparent-white-1: hsla(0, 0%, 100%, 0.75);
+  --color-slightly-transparent-white-2: hsla(0, 0%, 100%, 0.6); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 70%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 60%; } }
+  @media only screen and (max-width: 23.44em) {
+    html {
+      font-size: 51%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 56.25%; } }
+
+body {
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background-color: var(--color-primary-very-dark-blue); }
+
+/* 
+    || CARD COMPONENT 
+*/
+.card {
+  max-width: 111.2rem;
+  margin: 26.5rem auto;
+  background-color: var(--color-primary-dark-desaturated-blue);
+  color: #fff;
+  min-height: 44.4rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex; }
+  @media only screen and (max-width: 75em) {
+    .card {
+      max-width: 110rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .card {
+      flex-direction: column-reverse;
+      margin: 2rem 3rem;
+      height: 90vh;
+      text-align: center; } }
+  .card__detail {
+    background-color: var(--color-primary-dark-desaturated-blue);
+    padding: 7rem 7rem 6.7rem 7rem;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (max-width: 56.25em) {
+      .card__detail {
+        padding: 7rem 7rem 3.9rem 7rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .card__detail {
+        padding: 5rem 5rem 3rem 5rem;
+        flex: 0 0 60%; } }
+    @media only screen and (max-width: 29.69em) {
+      .card__detail {
+        flex: 0 0 65%;
+        padding: 4rem 4rem 2rem 4rem; } }
+    @media only screen and (max-width: 23.44em) {
+      .card__detail {
+        padding: 3.5rem 2.5rem 2.2rem 2.5rem;
+        flex: 0 0 70%; } }
+  .card__photo {
+    flex: 1;
+    background-image: linear-gradient(#aa5cdb, #aa5cdb), url(../img/image-header-desktop.jpg);
+    background-size: cover;
+    background-blend-mode: multiply; }
+    @media only screen and (max-width: 75em) {
+      .card__photo {
+        background-image: linear-gradient(#aa5cdb, #aa5cdb), url(../img/image-header-mobile.jpg); } }
+
+/* 
+    || Typography
+*/
+.heading {
+  font-size: 3.6rem;
+  margin-bottom: 3rem; }
+  .heading span {
+    color: var(--color-primary-soft-violet); }
+  @media only screen and (max-width: 37.5em) {
+    .heading {
+      margin-bottom: 1.5rem; } }
+
+.paragraph {
+  color: var(--color-slightly-transparent-white-1);
+  line-height: 2.5rem;
+  margin-right: 3rem;
+  margin-bottom: auto; }
+  @media only screen and (max-width: 75em) {
+    .paragraph {
+      margin-right: 0; } }
+  @media only screen and (max-width: 23.44em) {
+    .paragraph {
+      margin-bottom: 16%; } }
+
+/* 
+    || Stats 
+*/
+.stats {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 7rem; }
+  @media only screen and (max-width: 56.25em) {
+    .stats {
+      margin-right: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .stats {
+      flex-direction: column;
+      align-items: center; } }
+  .stats__count {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 2.3rem; }
+    @media only screen and (max-width: 23.44em) {
+      .stats__count {
+        font-size: 3rem; } }
+  .stats__feature {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: var(--color-slightly-transparent-white-2);
+    font-size: 1.19rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: .7rem; }
+    @media only screen and (max-width: 37.5em) {
+      .stats__feature {
+        margin-bottom: 2rem; } }
+    @media only screen and (max-width: 23.44em) {
+      .stats__feature {
+        margin-bottom: 3rem;
+        font-size: 1.4rem; } }

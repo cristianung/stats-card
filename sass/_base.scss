@@ -1,0 +1,52 @@
+:root {
+    --color-primary-very-dark-blue: hsl(233, 47%, 7%); // (main background)
+    --color-primary-dark-desaturated-blue: hsl(244, 38%, 16%); // (card background)
+    --color-primary-soft-violet: hsl(277, 64%, 61%); // (accent)
+
+    --color-white: hsl(0, 0%, 100%); // (main heading, stats)
+    --color-slightly-transparent-white-1: hsla(0, 0%, 100%, 0.75); // (main paragraph)
+    --color-slightly-transparent-white-2: hsla(0, 0%, 100%, 0.6); // (stat headings)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 70%;
+    }
+
+    @include respond(large-phone) {
+        font-size: 60%;
+    }
+
+    @include respond(small-phone) {
+        font-size: 51%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 56.25%;
+    }
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: var(--color-primary-very-dark-blue);
+}
