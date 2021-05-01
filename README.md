@@ -47,7 +47,7 @@ Small phone:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Click here!](https://www.frontendmentor.io/solutions/stats-preview-card-component-htmlcsssassflexbox-xOSndE7kd)
 - Live Site URL: [Click here!](https://heuristic-noyce-ef3bbc.netlify.app/)
 
 ## My process
