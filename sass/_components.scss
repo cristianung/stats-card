@@ -1,148 +1,129 @@
-
-/* 
-    || CARD COMPONENT 
+/*
+    || CARD COMPONENT
 */
 
+.container {
+    background-color: var(--color-primary-very-dark-blue);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
 .card {
-    max-width: 111.2rem;
-    margin: 26.5rem auto;
+    max-width: 111rem;
     background-color: var(--color-primary-dark-desaturated-blue);
-    color: #fff;
-    min-height: 44.4rem;
+    color: var(--color-white);
     border-radius: 1rem;
     overflow: hidden;
 
     display: flex;
-
-    @include respond(tab-land) {
-        max-width: 110rem;
-    }
-
-    @include respond(tab-port) {
-        flex-direction: column-reverse;
-        margin: 2rem 3rem; 
-        height: 90vh; 
-        text-align: center;
-    }
-
+    
     &__detail {
-        background-color: var(--color-primary-dark-desaturated-blue);
-        padding: 7rem 7rem 6.7rem 7rem;
-        flex: 0 0 50%;
+        padding: 7rem 7rem 6.8rem 7rem;
+    }
+
+    &__photo {
         display: flex;
-        flex-direction: column;
-
-        @include respond(tab-port) {
-            padding: 7rem 7rem 3.9rem 7rem;
-        }
-        
-        @include respond(large-phone) {
-            padding: 5rem 5rem 3rem 5rem;
-            flex: 0 0 60%;
-        }
-
-        @include respond(small-phone-2) {
-            flex: 0 0 65%;
-            padding: 4rem 4rem 2rem 4rem;
-        }
-        
-        @include respond(small-phone) {
-            padding: 3.5rem 2.5rem 2.2rem 2.5rem;
-            flex: 0 0 70%;
-        }
+        background: var(--color-primary-soft-violet);
+        flex: 0 0 50%;
     }
     
-    &__photo {
-        flex: 1;
-        background-image: linear-gradient(hsl(277, 64%, 61%), hsl(277, 64%, 61%)), url(../img/image-header-desktop.jpg);
-        background-size: cover;
-        background-blend-mode: multiply;
-        
-        @include respond(tab-land) {
-            background-image: linear-gradient(hsl(277, 64%, 61%), hsl(277, 64%, 61%)), url(../img/image-header-mobile.jpg);
-        }
+    &__photo img{
+        object-fit: cover;
+        mix-blend-mode: multiply;
+        opacity: .75;
+        width: 100%;
     }
 }
 
-/* 
-    || Typography
-*/
+/* || Typography */
 
 .heading {
     font-size: 3.6rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 
     span {
         color: var(--color-primary-soft-violet);
     }
 
-    @include respond(large-phone) {
-        margin-bottom: 1.5rem;
-    }
 }
 
 .paragraph {
     color: var(--color-slightly-transparent-white-1);
+    margin-bottom: 8rem;
     line-height: 2.5rem;
-    margin-right: 3rem;
-    margin-bottom: auto;
-
-    @include respond(tab-land) {
-        margin-right: 0;
-    }
-
-    @include respond(small-phone) {
-        margin-bottom: 16%;
-    }
 }
 
-/* 
-    || Stats 
-*/
+/* || Stats */
 
 .stats {
-    list-style: none;
+
     display: flex;
     justify-content: space-between;
-    margin-right: 7rem;
-
-    @include respond(tab-port) {
-        margin-right: 0;
-    }
-
-    @include respond(large-phone) {
-        flex-direction: column;
-        align-items: center;
-    }
+    list-style: none;
+    margin-right: 4.2rem;
 
     &__count {
         display: flex;
         flex-direction: column;
-
         font-weight: 700;
         font-size: 2.3rem;
 
-        @include respond(small-phone) {
-            font-size: 3rem;
+        span {
+            font-family: 'Lexend Deca', sans-serif;
+            font-weight: 400;
+            font-size: 1.19rem;
+            text-transform: uppercase;
+            color: var(--color-slightly-transparent-white-2);
+            margin-top: .7rem;
+            letter-spacing: 0.1rem;
+        }
+    }
+}
+
+/*
+    || MEDIA QUERIES
+*/
+
+@media only screen and (max-width: $bp-medium) {
+
+    .card {
+
+        flex-wrap: wrap-reverse;
+        text-align: center;
+
+        &__detail { padding: 5rem 5rem 5.8rem 5rem; }
+
+        &__photo { flex: 1; }
+
+        &__photo img {
+            flex: 1;
+            width: 100%
         }
     }
 
-    &__feature {
-        font-family: 'Lexend Deca', sans-serif;
-        font-weight: 400;
-        color: var(--color-slightly-transparent-white-2);
-        font-size: 1.19rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1rem;
-        margin-top: .7rem;
+    .paragraph { margin-bottom: 3.7rem; }
 
-        @include respond(large-phone) { 
-            margin-bottom: 2rem;
-        }
+    .stats { margin: 0; }
+}
+
+
+@media only screen and (max-width: $bp-small) {
+
+    .card {
+
+        &__detail { padding: 3.5rem 5rem 1rem 5rem; }
+    }
+
+    .heading { font-size: 2.8rem; }
+
+    .stats {
         
-        @include respond(small-phone) { 
-            margin-bottom: 3rem;
-            font-size: 1.4rem;
+        flex-direction: column;
+
+        &__count {
+            span { margin-bottom: 3rem; }
         }
     }
 }
