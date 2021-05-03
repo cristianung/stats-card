@@ -27,23 +27,15 @@ Users should be able to:
 
 Desktop:
 
-![](/screenshot/big-desktop.png "Desktop")
+![](/screenshot/desktop.png "Desktop")
 
-Tablet - Landscape:
+Tablet:
 
-![](/screenshot/tab-land.png "Landscape")
+![](/screenshot/tablet.png "Tablet")
 
-Tablet - Portrait:
+Mobile:
 
-![](/screenshot/tab-port.png "Portrait")
-
-Large phone:
-
-![](/screenshot/large-phone.png "Phone")
-
-Small phone:
-
-![](/screenshot/small-phone.png "Phone")
+![](/screenshot/mobile.png "Mobile")
 
 ### Links
 
